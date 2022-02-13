@@ -18,20 +18,25 @@ void main() {
 class DicePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Expanded(
-          child: Image(
-            image: AssetImage('images/dice1.png'),
+    return Center(
+      child: Row(
+        children: [
+          Expanded(
+            child: FlatButton(
+                onPressed: (){
+                  print('Left button was clecked');
+                },
+                child: Image.asset('images/dice1.png')),
           ),
-        ),
-        Expanded(
-          child: Image(
-            image: AssetImage('images/dice2.png'),
+          Expanded(
+            child: FlatButton(
+                onPressed: (){
+                  print('Right buttom was clicked');
+                },
+                child: Image.asset('images/dice2.png')),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
